@@ -355,6 +355,10 @@ footer {
   background-color: var(--secondary-bg-text-color);
 }
 
+.footer-parent {
+  display: flex;
+}
+
 .logo-footer {
   display: inline-flex;
   margin: 0px 0px 20px 0px;
@@ -395,7 +399,7 @@ address li + li {
 }
 
 .social-links-footer-parent {
-  justify-content: center;
+  margin: 11px 0px 0px 70px;
 }
 
 .social-links-footer-parent h2 {
@@ -406,7 +410,7 @@ address li + li {
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: left;
   color: #ffffff;
 }
