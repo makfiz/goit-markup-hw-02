@@ -22,7 +22,9 @@ a {
 .links-hover:hover,
 .links-hover:focus {
   color: var(--accent-text-color);
+  fill: var(--accent-text-color);
 }
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0 auto;
@@ -112,6 +114,17 @@ nav + .list {
   color: var(--primary-text-color);
 }
 
+.header-icon {
+  width: 16px;
+  height: 12px;
+  margin: 0px 10px;
+  color: var(--accent-text-color);
+  fill: #757575;
+}
+.links-hover:hover .header-icon,
+.links-hover:focus .header-icon {
+  fill: var(--accent-text-color);
+}
 /* main */
 main {
   background-color: var(--white-text-color);
@@ -123,6 +136,13 @@ main {
 }
 
 .img-overlay {
+  max-width: 1600px;
+  margin: 0px auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/Img-Overlay.jpg);
 }
 
 .business-solutions .conteiner {
@@ -193,9 +213,15 @@ main {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
-.Feature {
-  width: 270px;
-  height: 101px;
+
+.Feature-icon {
+  height: 70px;
+  width: 70px;
+  padding: 25px 100px;
+  box-sizing: content-box;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 h2 {
@@ -245,8 +271,19 @@ h2 {
   padding: 30px 0px 30px 0px;
 }
 
+.tile__prev > p {
+  margin: 0px 0px 16px 0px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
 .our-team h3 {
-  margin: 0px 0px 0px 0px;
+  margin: 0px 0px 10px 0px;
   padding: 0px;
   font-style: normal;
   font-weight: 500;
@@ -256,15 +293,60 @@ h2 {
   letter-spacing: 0.03em;
   color: #212121;
 }
-.our-team p {
-  margin: 10px 0px 0px 0px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.18;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+
+.social-links-parent {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links {
+  display: inline-flex;
+  box-sizing: content-box;
+  padding: 12px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.social-links:hover,
+.social-links:hover .social-links-icon {
+  background-color: var(--accent-text-color);
+  fill: #fff;
+}
+
+.social-links + .social-links {
+  margin-left: 10px;
+}
+
+.social-links-icon {
+  fill: #afb1b8;
+  height: 20px;
+  width: 20px;
+}
+
+/* Постоянные клиенты */
+.clients {
+  display: flex;
+}
+
+.client {
+  height: 60px;
+  width: 106px;
+  box-sizing: content-box;
+  padding: 16px 32px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+}
+
+.clients li + li {
+  margin-left: 30px;
+}
+
+.client-card:hover .client {
+  border: 1px solid var(--accent-text-color);
+  border-radius: 4px;
+  fill: var(--accent-text-color);
 }
 /* footer */
 footer {
@@ -291,7 +373,6 @@ footer {
   color: var(--white-text-color);
 }
 address {
-  width: 231px;
   font-style: normal;
 }
 
@@ -311,6 +392,46 @@ address li + li {
 }
 .contacts-footer {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.social-links-footer-parent {
+  justify-content: center;
+}
+
+.social-links-footer-parent h2 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.social-links-footer {
+  display: inline-flex;
+  box-sizing: content-box;
+  padding: 12px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.social-links-footer:hover {
+  background: var(--accent-text-color);
+}
+
+.social-links-footer + .social-links-footer {
+  margin-left: 10px;
+}
+
+.social-links-footer-icon {
+  fill: #fff;
+  height: 20px;
+  width: 20px;
 }
 
 /* ____________________________________________Portfolio_________________________________________________________*/
