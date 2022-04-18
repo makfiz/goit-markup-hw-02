@@ -68,6 +68,7 @@ header .conteiner {
 header {
   background-color: var(--white-text-color);
   border-bottom: 1px solid #ececec;
+  padding: 32px 0px 32px 0px;
 }
 
 header li {
@@ -79,7 +80,6 @@ header li:last-child {
 /* Menu Nav */
 .logo-nav {
   margin-right: 93px;
-  padding: 25px 0px 25px 0px;
 
   font-family: 'Raleway';
   font-style: normal;
@@ -112,6 +112,7 @@ nav + .list {
   margin-left: auto;
 }
 .contacts-header {
+  display: flex;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -122,11 +123,12 @@ nav + .list {
 
 .header-icon {
   width: 16px;
-  height: 12px;
+  height: 16px;
   margin: 0px 10px;
   color: var(--accent-text-color);
   fill: #757575;
 }
+
 .links-hover:hover .header-icon,
 .links-hover:focus .header-icon {
   fill: var(--accent-text-color);
@@ -221,11 +223,13 @@ main {
 }
 
 .Feature-icon {
-  height: 70px;
-  width: 70px;
-  padding: 25px 100px;
-  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 270px;
   background: #f5f4fa;
+  box-sizing: content-box;
   border-radius: 4px;
   margin-bottom: 30px;
 }
@@ -315,6 +319,8 @@ h2 {
 }
 
 .social-links:hover,
+.social-links:focus,
+.social-links:focus .social-links-icon,
 .social-links:hover .social-links-icon {
   background-color: var(--accent-text-color);
   fill: #fff;
@@ -349,10 +355,16 @@ h2 {
   margin-left: 30px;
 }
 
-.client-card:hover .client {
+.client-card {
+  display: flex;
+  outline: none;
+}
+
+.client-card:hover .client,
+.client-card:focus .client {
+  fill: var(--accent-text-color);
   border: 1px solid var(--accent-text-color);
   border-radius: 4px;
-  fill: var(--accent-text-color);
 }
 /* footer */
 footer {
@@ -430,7 +442,8 @@ address li + li {
   border-radius: 50%;
 }
 
-.social-links-footer:hover {
+.social-links-footer:hover,
+.social-links-footer:focus {
   background: var(--accent-text-color);
 }
 
@@ -458,6 +471,8 @@ address li + li {
 
 .filter {
   padding: 6px 22px 6px 22px;
+  background: #f5f4fa;
+  color: #212121;
 }
 .filters li + li {
   margin-left: 8px;
@@ -466,7 +481,7 @@ address li + li {
 .filters button {
   height: 38px;
   border-radius: 4px;
-  border-color: var(--white-text-color);
+  border: none;
   font-family: 'Roboto';
   cursor: pointer;
   font-style: normal;
@@ -488,15 +503,12 @@ address li + li {
   margin-right: 0px;
 }
 
-.active {
+.filter:hover,
+.filter:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   background: var(--accent-text-color);
   color: var(--white-text-color);
-}
-.inactive {
-  background: #f5f4fa;
-  color: #212121;
 }
 
 .projects-card {
@@ -504,8 +516,8 @@ address li + li {
   box-sizing: border-box;
 }
 
-.projects-card img {
-  display: block;
+.projects-card:hover {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .projects-card div {
